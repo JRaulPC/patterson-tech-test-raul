@@ -1,4 +1,5 @@
 import styles from "@/app/components/CharacterInfo/characterInfo.module.css";
+
 interface CharacterInfoProps {
   currentPage: number;
   totalCharacters: number;
