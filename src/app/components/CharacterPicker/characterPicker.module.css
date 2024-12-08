@@ -1,0 +1,68 @@
+.pickedCharactersContainer {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+  background: white;
+
+  @media (min-width: 576px) {
+    right: 0;
+    top: auto;
+    background: none;
+    max-width: 50%;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 40%;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 30%;
+  }
+
+  .titleContainer {
+    padding: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 14px;
+
+    @media (min-width: 576px) {
+      font-size: var(--font-size-desktop);
+    }
+  }
+
+  .pickedCharacters {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    background-color: #f9f9f9;
+
+    @media (min-width: 576px) {
+      background: none;
+    }
+  }
+
+  .sharedEpisodesTitle {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--primary-color);
+  }
+
+  .sharedEpisodesList {
+    margin-top: 1em;
+    max-height: 60svh; /* Adjust the height as needed */
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    padding: 10px; /* Optional: Add some padding */
+    border: 1px solid #ddd; /* Optional: Add a border for better visibility */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+  }
+
+  .clearButton {
+    width: 40%;
+  }
+}
