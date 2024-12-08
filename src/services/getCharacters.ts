@@ -1,6 +1,8 @@
+import { GetCharactersResponse } from "@/app/interfaces/chracter";
+
 export const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
-const getCharacters = async () => {
+const getCharacters = async (): Promise<GetCharactersResponse> => {
   try {
     const response = await fetch(`${apiUrl}/character`);
     if (!response.ok) {
@@ -11,9 +13,9 @@ const getCharacters = async () => {
 
     return data;
   } catch (error: unknown) {
-    console.error("No se pueden mostrar los personajes", error);
+    console.error("Couldn't get characters", error);
 
-    throw new Error("No se pueden mostrar los personajes");
+    throw new Error("Couldn't get characters");
   }
 };
 
