@@ -6,9 +6,13 @@ import { useEffect, useState } from "react";
 import CharacterList from "../CharacterList/CharacterList";
 import Pagination from "../Pagination/Pagination";
 import CharacterInfo from "@/app/components/CharacterInfo/CharacterInfo";
+import CharacterPicker from "../CharacterPicker/CharacterPicker";
+
+import styles from "@/app/components/CharactersPageWrapper/charactersPageWrapper.module.css";
 
 export default function CharactersPageWrapper() {
   const [characters, setCharacters] = useState<Character[]>([]);
+  const [pickedCharacters, setPickedCharacters] = useState<Character[]>([]);
 
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -39,6 +43,23 @@ export default function CharactersPageWrapper() {
     setPage(newPage);
   };
 
+  const handlePickCharacter = (character: Character) => {
+    const isCharacterAlreadyPicked = pickedCharacters.some(
+      (picked) => picked.id === character.id
+    );
+
+    if (!isCharacterAlreadyPicked) {
+      if (pickedCharacters.length < 2) {
+        setPickedCharacters([...pickedCharacters, character]);
+      } else if (pickedCharacters.length === 2) {
+        setPickedCharacters([pickedCharacters[1], character]);
+      }
+    }
+  };
+  const clearPickedCharacters = () => {
+    setPickedCharacters([]);
+  };
+
   return (
     <div>
       <Pagination
@@ -51,8 +72,15 @@ export default function CharactersPageWrapper() {
         totalCharacters={totalCharacters}
         charactersPerPage={charactersPerPage}
       />
-      <div>
-        <CharacterList characters={characters} />
+      <div className={styles.charactersPageContent}>
+        <CharacterList
+          characters={characters}
+          onPickCharacter={handlePickCharacter}
+        />
+        <CharacterPicker
+          pickedCharacters={pickedCharacters}
+          clearPickedCharactersAction={clearPickedCharacters}
+        />
       </div>
     </div>
   );

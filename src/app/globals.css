@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #8aa6c6;
+  --secondary-color: #698977;
+  --font-size-desktop: 16px;
+  --font-size-mobile: 14px;
+  --background: #e3e4e3;
+}
+
 /* Remove default margin and padding */
 *,
 *::before,
@@ -71,18 +79,19 @@ select {
 }
 
 button {
-  background-color: #8aa6c6;
-
+  background-color: var(--primary-color);
   border-radius: 6px;
   height: fit-content;
   border: 1px transparent;
   padding: 0 0.2em;
   cursor: pointer;
-  width: 100%;
+  width: 60%;
+
+  font-size: 16px;
 }
 
 button:hover {
-  background-color: #0047a3;
+  background-color: var(--secondary-color);
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

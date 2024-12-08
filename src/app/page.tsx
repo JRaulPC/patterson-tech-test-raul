@@ -1,9 +1,12 @@
+import { Suspense } from "react";
 import CharacterPageWrapper from "./components/CharactersPageWrapper/CharactersPageWrapper";
 
 export default async function Home() {
   return (
     <main>
-      <CharacterPageWrapper />
+      <Suspense>
+        <CharacterPageWrapper />
+      </Suspense>
     </main>
   );
 }
