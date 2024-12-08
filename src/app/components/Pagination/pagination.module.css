@@ -3,12 +3,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  margin-top: 4em;
+  @media (min-width: 576px) {
+    margin-top: 1em;
+  }
 }
 
 .navigationContainerButtons {
   display: flex;
   width: 30%;
 
-  gap: 5em;
-  padding: 1em;
+  gap: 1em;
+
+  @media (min-width: 768px) {
+    gap: 5em;
+    padding: 1em;
+  }
 }
