@@ -2,30 +2,23 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   justify-items: center;
-  gap: 0.2em;
+  gap: 0.5em;
   row-gap: 2em;
-}
+  padding: 0 1em;
 
-@media (min-width: 576px) {
-  .characterList {
+  @media (min-width: 576px) {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (min-width: 768px) {
-  .characterList {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 992px) {
-  .characterList {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
   }
-}
 
-@media (min-width: 1200px) {
-  .characterList {
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1400px) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
