@@ -1,5 +1,13 @@
-import styles from "./page.module.css";
+import styles from "@/app/page.module.css";
+import getCharacters from "@/services/getCharacters";
+import CharacterList from "./components/CharacterList/CharacterList";
 
-export default function Home() {
-  return <div className={styles.page}></div>;
+export default async function Home() {
+  const characters = await getCharacters();
+
+  return (
+    <div className={styles.page}>
+      <CharacterList characters={characters.results} />
+    </div>
+  );
 }
