@@ -17,7 +17,7 @@ const CharacterCard = ({ character: { name, image } }: ChractersListProps) => {
         height={300}
       />
       <div className={styles.infoWrapper}>
-        <h2>{name}</h2>
+        <h2 className={styles.characterTitle}>{name}</h2>
         <button>Info</button>
       </div>
     </article>

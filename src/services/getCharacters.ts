@@ -2,9 +2,9 @@ import { GetCharactersResponse } from "@/app/interfaces/chracter";
 
 export const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
-const getCharacters = async (): Promise<GetCharactersResponse> => {
+const getCharacters = async (page: number): Promise<GetCharactersResponse> => {
   try {
-    const response = await fetch(`${apiUrl}/character`);
+    const response = await fetch(`${apiUrl}/character?page=${page}`);
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
     }
