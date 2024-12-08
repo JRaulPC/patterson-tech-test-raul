@@ -7,6 +7,10 @@
   font-size: 0.8em;
 }
 
+.characterTitle {
+  width: 100%;
+}
+
 .characterCardImage {
   cursor: pointer;
 }

@@ -7,13 +7,15 @@ interface ChractersListProps {
 
 const CharacterList = ({ characters }: ChractersListProps) => {
   return (
-    <ul className={styles.characterList}>
-      {characters.map((character, index) => (
-        <li key={index}>
-          <CharacterCard character={character} />
-        </li>
-      ))}
-    </ul>
+    <section>
+      <ul className={styles.characterList}>
+        {characters.map((character, index) => (
+          <li key={index}>
+            <CharacterCard character={character} />
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 };
 
