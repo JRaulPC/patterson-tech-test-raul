@@ -1,3 +1,4 @@
+import styles from "@/app/components/CharacterInfo/characterInfo.module.css";
 interface CharacterInfoProps {
   currentPage: number;
   totalCharacters: number;
@@ -15,7 +16,7 @@ function CharacterInfo({
   );
 
   return (
-    <div>
+    <div className={styles.characterInfoContainer}>
       <p>
         A total of <strong>{charactersShown}</strong> from{" "}
         <strong>{totalCharacters}</strong> characters have been shown.
