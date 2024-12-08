@@ -2,6 +2,8 @@
 
 This application allows users to view data about the Rick and Morty animated series. Users can check individual character details or select two characters to see which episodes they both appear in.
 
+https://vercel.com/jraulpcs-projects/patterson-tech-test
+
 ## Technologies Used
 
 - **Next.js**: A React framework for production-grade web applications.
@@ -24,9 +26,8 @@ Ensure you have the following installed:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/JRaulPC/patterson-tech-test.git
    cd your-repo
-
    ```
 
 2. Install dependencies:
