@@ -1,0 +1,19 @@
+.characterCard {
+  display: flex;
+
+  flex-direction: column;
+  gap: 0.5em;
+
+  font-size: 0.8em;
+}
+
+.characterCardImage {
+  cursor: pointer;
+}
+
+.infoWrapper {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
