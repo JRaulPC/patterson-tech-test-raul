@@ -2,7 +2,7 @@
 
 This application allows users to view data about the Rick and Morty animated series. Users can check individual character details or select two characters to see which episodes they both appear in.
 
-https://vercel.com/jraulpcs-projects/patterson-tech-test
+https://patterson-tech-test.vercel.app/
 
 ## Technologies Used
 
